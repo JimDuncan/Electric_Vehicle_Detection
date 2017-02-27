@@ -18,6 +18,8 @@ I am going to tackle this one first because it affected how I treated cleaning a
 2. Using the average usage of each household as a representation for the training set, it appears over the course of two weeks that each day there is spike in electricity.  Graph below.
 ![alt tag] (https://github.com/ajduncan3/Electric_Vehicle_Detection/blob/master/Graphs%20and%20Pictures/Average%20household%20use%20over%20two%20weeks.png)
 
+Filtering down into a single days worth of electicity usage, it becomes apparent that usage begins to ramp up in the early afternoon and peaks in the evening.. then falls off precipitously right before early morning. This makes intuitive sense, most people are arriving home from work in the afternoon, and begin to use their appliances for their evening.  I would assume a typical person comes home, turns on their heater/air conditioner, turns on the TV, starts cooking dinner, users their computer,  maybe plugs in their Electric Vehicle if they own one, etc... Absent of that individual being home those appliances are probably not going to be pulling from the power grid.  Graph below.
+![alt tag](https://github.com/ajduncan3/Electric_Vehicle_Detection/blob/master/Graphs%20and%20Pictures/Average%20household%20use%20in%20one%20day.png)
 
 ### Which houses own and EV?
 Approximately 1/3 of the training set households owned an EV, or 485/1586 = 30.5% if you prefer decimals.  
