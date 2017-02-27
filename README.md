@@ -22,4 +22,7 @@ Filtering down into a single days worth of electicity usage, it becomes apparent
 ![alt tag](https://github.com/ajduncan3/Electric_Vehicle_Detection/blob/master/Graphs%20and%20Pictures/Average%20household%20use%20in%20one%20day.png)
 
 ### Which houses own and EV?
-Approximately 1/3 of the training set households owned an EV, or 485/1586 = 30.5% if you prefer decimals.  
+Approximately 1/3 of the training set households owned an EV, or 485/1586 = 30.5% if you prefer decimals.  The House ID can be found in the the pickled file Houses_that_own_ev.pkl located in this repo's data_files folder.  Or just go to the link below.
+
+https://raw.githubusercontent.com/ajduncan3/Electric_Vehicle_Detection/master/data_files/Houses_that_own_ev.pkl
+
