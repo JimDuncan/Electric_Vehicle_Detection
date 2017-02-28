@@ -26,3 +26,4 @@ Approximately 1/3 of the training set households owned an EV, or 485/1586 = 30.5
 
 https://raw.githubusercontent.com/ajduncan3/Electric_Vehicle_Detection/master/data_files/Houses_that_own_ev.pkl
 
+Now, over anyone interval it appears that at most 16% have an EV plugged in and given that almost two sigmas worth of the households has their EV plugged in less than 10 % of the time... this problem appears to become a minority class detection problem.  Very similar to a fraud detection problem, I needed to detect with high recall an occurrence that only happens a small percentage of the time.     
