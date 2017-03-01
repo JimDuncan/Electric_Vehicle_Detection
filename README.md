@@ -31,8 +31,8 @@ Now, over any one interval it appears that at most 16% of households have an EV 
 ### Determine the probability an EV is charging at a given interval 
 I did not have the answer if a EV was charging or not on the test data, given that it is test data.  I surely could split up my training data though, for which I do know when EVs were charging or not. By treating this dataset as a time series and training an LSTM Neural Network on the train set, I was able to achieve a recall above 80% on some of the households in the training data.  This result is far better than the less than 10% recall I was getting with other techniques.  
 Graph below:
-*Blue is training and red is test data
-*As you can see the neural net captures the pattern including the spikes in usage very well
+* Blue is training and red is test data
+* As you can see the neural net captures the pattern including the spikes in usage very well
 
 ![alt tag] (https://github.com/ajduncan3/Electric_Vehicle_Detection/blob/master/Graphs%20and%20Pictures/kwh%20usage%20for%20a%20single%20house.png)
 
