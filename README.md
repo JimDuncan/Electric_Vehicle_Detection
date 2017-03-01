@@ -36,5 +36,5 @@ Graph below:
 
 ![alt tag] (https://github.com/ajduncan3/Electric_Vehicle_Detection/blob/master/Graphs%20and%20Pictures/kwh%20usage%20for%20a%20single%20house.png)
 
-Finally I trained my Neural Net on the average household/30 min interval. The probability that each a household in the test data owns an EV can be in the pickled file  found here.  
+Finally I trained my Neural Net on the average households usage over a 30 min interval. The probability that each a household in the test data owns an EV can be found in the pickled file found here.  
 https://github.com/ajduncan3/Electric_Vehicle_Detection/blob/master/data_files/predicted_kwh_probabilities.pkl
