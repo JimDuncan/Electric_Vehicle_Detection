@@ -12,9 +12,9 @@ This project utilizes an open data set from GridCure.  The intention of this pro
 
 
 ###Interesting aspects of the dataset
-I am going to tackle this one first because it affected how I treated cleaning and ultimately how I trained my algorithms on it. 
+I am going to tackle this one first because it affected how I treated cleaning and ultimately how I trained my algorithms on it.
 
-1. Using findNaN function that I wrote, I discovered that there were four households that containted null data in the training set and two households in the test set.  Given that these houses that had null data only comprimised less than 0.5% of the data I felt comfortable eliminating them from the datasets.  It appears that these null values comprise an entire months worth of data.  In all likely hood these occupants were either moving in or moving out their houses... thus this dataset only captured their first month or last month of electricity usage. 
+1. Using findNaN function that I wrote, I discovered that there were four households that containted null data in the training set and two households in the test set.  Given that these houses that had null data only comprimised less than 0.5% of the data I felt comfortable eliminating them from the datasets.  It appears that these null values comprise an entire months worth of data.  In all likely hood these occupants were either moving in or moving out their houses... thus this dataset only captured their first month or last month of electricity usage.
 2. Using the average usage of each household as a representation for the training set, it appears over the course of two weeks that each day there is spike in electricity.  Graph below.
 ![alt tag] (https://github.com/ajduncan3/Electric_Vehicle_Detection/blob/master/Graphs%20and%20Pictures/Average%20household%20use%20over%20two%20weeks.png)
 
@@ -28,8 +28,17 @@ https://raw.githubusercontent.com/ajduncan3/Electric_Vehicle_Detection/master/da
 
 Now, over any one interval it appears that at most 16% of households have an EV plugged in and given that almost two sigmas worth of the households has their EV plugged in less than 10 % of the time... this problem appears to be a minority class detection problem.  Very similar to a fraud detection problem, I needed to detect with high recall an occurrence that only happens a small percentage of the time.  I used a variety a techniques ranging from using the synthetic minority oversampling technique(SMOTE) to a gradient boosted tree classifier.  Yet no matter what technique or combination of techniques I still had a very low recall.  That is not good to say the least.  Enter Neural Networks and the Long Short Term Memory(LSTM) layer strucutre.
 
-### Determine the probability an EV is charging at a given interval 
-<<<<<<< HEAD
-=======
+### Determine the probability an EV is charging at a given interval
+
+
 I did not have the answer if a EV was charging or not on the test data, given that it is test data.  I surely could split up my training data though, for which I do know when EVs were charging or not. By treating this dataset as a time series and training an LSTM Neural Network on the train set, I was able to achieve a recall above 80% on some of the households in the training data.  This result is far better than the less than 10% recall I was getting with other techniques.  
->>>>>>> f28205b9e56dba3a671961112b316ca8a73677c1
+
+
+Graph below:
+* Blue is training data and red is test data
+* As you can see the neural net captures the pattern including the spikes in usage very well
+
+![alt tag] (https://github.com/ajduncan3/Electric_Vehicle_Detection/blob/master/Graphs%20and%20Pictures/kwh%20usage%20for%20a%20single%20house.png)
+
+Finally I trained my Neural Net on the average households usage over a 30 min interval. The probability that each a household in the test data owns an EV can be found in the pickled file found here.  
+https://github.com/ajduncan3/Electric_Vehicle_Detection/blob/master/data_files/predicted_kwh_probabilities.pkl
