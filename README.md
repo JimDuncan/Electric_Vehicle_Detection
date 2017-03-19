@@ -37,7 +37,6 @@ I did not have the answer if a EV was charging or not on the test data, given th
 Graph below:
 * Blue is training data and red is test data
 * As you can see the neural net captures the pattern including the spikes in usage very well
-
 ![alt tag] (https://github.com/ajduncan3/Electric_Vehicle_Detection/blob/master/Graphs%20and%20Pictures/kwh%20usage%20prediction%20using%20NN_single%20house.png)
 
 Finally I trained my Neural Net on the average households usage over a 30 min interval. The probability that each a household in the test data owns an EV can be found in the pickled file found here.  
