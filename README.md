@@ -3,7 +3,7 @@ Detecting the presence of an Electic Vehicle that is connected to the grid.
 
 <img src = "http://st.automobilemag.com/uploads/sites/11/2015/01/2014-BMW-i3-eDrive-rear-side-view-charging1.jpg" width = "250">
 
-##Project Summary
+## Project Summary
 This project utilizes an open data set from GridCure.  The intention of this project is the following:
 
 * Interesting aspects about this dataset
@@ -11,7 +11,7 @@ This project utilizes an open data set from GridCure.  The intention of this pro
 * Determine the probability that an EV is charging at any given interval
 
 
-###Interesting aspects of the dataset
+### Interesting aspects of the dataset
 I am going to tackle this one first because it affected how I treated cleaning and ultimately how I trained my algorithms on it.
 
 1. Using findNaN function that I wrote, I discovered that there were four households that containted null data in the training set and two households in the test set.  Given that these houses that had null data only comprimised less than 0.5% of the data I felt comfortable eliminating them from the datasets.  It appears that these null values comprise an entire months worth of data.  In all likely hood these occupants were either moving in or moving out their houses... thus this dataset only captured their first month or last month of electricity usage.
