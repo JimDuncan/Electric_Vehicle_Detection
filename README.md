@@ -19,7 +19,7 @@ I am going to tackle this one first because it affected how I treated cleaning a
 ![alt tag](https://github.com/ajduncan3/Electric_Vehicle_Detection/blob/master/Graphs%20and%20Pictures/Average%20household%20use%20over%20two%20weeks.png)
 
 Filtering down into a single days worth of electicity usage, it becomes apparent that usage begins to ramp up in the early morning, remains steady throughout mid morning and early afternoon, peaks in the evening and then finally falls off precipitously right after peak usage. This makes intuitive sense, there is likely minimal electricity use when everyone in a house is asleep and usage will start to increase as people wake up and start to make breakfast,use the toaster, stove, etc... and electricity use will be at it's peak in the evening when everyone in the household is home and using all their computers, TV's,running the air conditioner, and charging their EV if they own one. Graph below.
-![alt tag](https://github.com/ajduncan3/Electric_Vehicle_Detection/blob/master/Graphs%20and%20Pictures/Average%20household%20use%20in%20one%20day.png)
+![alt tag](https://github.com/ajduncan3/Electric_Vehicle_Detection/blob/master/Graphs%20and%20Pictures/single%20house%20kwh%20usage%20prediction%20using%20NN.png)
 
 ### Which houses own an EV?
 Approximately 1/3 of the training set households owned an EV, or 485/1586 = 30.5% if you prefer decimals.  The House ID can be found in the the pickled file 'Houses_that_own_ev.pkl' located in this repo's data_files folder.  Or just go to the link below.
